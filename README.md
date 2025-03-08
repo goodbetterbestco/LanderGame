@@ -48,7 +48,7 @@ With a 16-week timeline—double the original scope—this plan leverages the ex
 
 ### Physics Engine
 
-The physics engine is the game's backbone, balancing realism and fun to keep players hooked.
+The physics engine is the game’s backbone, balancing realism and fun to keep players hooked.
 
 #### Core Simulations
 - **Gravitational Forces**: Simulate starship interactions with celestial bodies.
@@ -69,7 +69,7 @@ The physics engine is the game's backbone, balancing realism and fun to keep pla
 
 ### Graphics and Visual Style
 
-The game uses the Canvas API for a 2D rotoscoped aesthetic that's unique, functional, and mobile-friendly.
+The game uses the Canvas API for a 2D rotoscoped aesthetic that’s unique, functional, and mobile-friendly.
 
 #### Implementation
 - **Visual Design**: Vector-based art with bold outlines and a vibrant palette for readability.
@@ -145,8 +145,8 @@ Arcade elements drive replayability and stickiness.
 - **Leaderboards**: Local and global, sorted by difficulty/mode.
 - **Profiles**: Track stats, achievements, and unlocks.
 - **Difficulty Levels**: Adjust physics for varied challenges.
-- **Achievements**: Unlock cosmetics or missions (e.g., "Lunar Ace").
-- **Challenges**: Time attacks or special objectives (e.g., "No Assist Landing").
+- **Achievements**: Unlock cosmetics or missions (e.g., “Lunar Ace”).
+- **Challenges**: Time attacks or special objectives (e.g., “No Assist Landing”).
 
 #### Enhancements
 - **Progression**: Tie unlocks to skill-based milestones, not paywalls.
@@ -156,8 +156,7 @@ Arcade elements drive replayability and stickiness.
 - Keep it simple and rewarding—don't overcomplicate the core.
 
 ### Cross-Platform Compatibility
-
-Seamless performance across platforms is non-negotiable, with mobile as the priority.
+- Seamless performance across platforms is non-negotiable, with mobile as the priority.
 
 #### Targets
 - Desktop browsers (Chrome, Firefox, Safari, Edge)
@@ -177,7 +176,6 @@ Seamless performance across platforms is non-negotiable, with mobile as the prio
 ## Project Structure and Architecture
 
 ### Directory Structure
-
 Below is the current and planned directory structure:
 
 ```
@@ -216,7 +214,6 @@ lunar-landing-starship/
 ```
 
 ### Technology Stack
-
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+), Canvas API, Web Audio API, LocalStorage, Webpack, Babel
 - **Tools**: Git, Jest (testing), Puppeteer (performance)
 - **Deployment**: GitHub Pages/Netlify
@@ -413,6 +410,7 @@ To get started immediately, follow these steps to set up the development environ
 #### 3. Install Dependencies
 - Ensure Node.js and npm are installed on your machine (download from `https://nodejs.org` if needed).
 - Install project dependencies:
+<<<<<<< HEAD
   ```
   npm install
   ```
@@ -444,6 +442,7 @@ Once the setup is complete, you should see the following when running the game:
 Here are the immediate tasks for the next developer, prioritized to advance the project toward the Weeks 3-4 goals:
 
 1. **Physics Expansion**:
+<<<<<<< HEAD
    - Expand `src/core/game.js` to include realistic and arcade modes (e.g., toggleable drag, orbit simulation). Consider splitting physics logic into `src/core/physics.js` for better organization (see Technical Requirements).
    - Tune physics constants (gravity: 0.1, thrust: 0.2, bounce: -0.5) based on playtesting feedback to balance fun and challenge.
    - Implement atmospheric drag and orbital mechanics as outlined in the Technical Requirements.
@@ -504,74 +503,68 @@ Here are the immediate tasks for the next developer, prioritized to advance the 
 
 #### Git and GitHub
 - **Authentication Errors (HTTPS)**:
-  - If using HTTPS and encountering a `403` error (`Permission denied`), you may need a Personal Access Token (PAT):
-    1. Go to `https://github.com/settings/tokens`.
-    2. Generate a new PAT with the `repo` scope.
-    3. When prompted for a password during `git push`, use the PAT instead of your GitHub password.
-  - To avoid repeated prompts, cache credentials:
-    ```
-    git config --global credential.helper osxkeychain  # macOS
-    ```
-  - **Recommendation**: Use SSH instead of HTTPS to avoid these issues (see Setup Instructions).
+- If using HTTPS and encountering a `403` error (`Permission denied`), you may need a Personal Access Token (PAT):
+  1. Go to `https://github.com/settings/tokens`.
+  2. Generate a new PAT with the `repo` scope.
+  3. When prompted for a password during `git push`, use the PAT instead of your GitHub password.
+- To avoid repeated prompts, cache credentials:
+- git config --global credential.helper osxkeychain  # macOS
+- - **Recommendation**: Use SSH instead of HTTPS to avoid these issues (see Setup Instructions).
 
 - **Authentication Errors (SSH)**:
-  - If `git push` fails with `Permission denied (publickey)`, verify:
-    - Your SSH key is added to the SSH agent: `ssh-add ~/.ssh/id_ed25519`.
-    - The public key is added to GitHub: `https://github.com/settings/keys`.
-    - The remote URL uses SSH: `git remote -v` should show `git@github.com:...`.
-    - Test the SSH connection: `ssh -T git@github.com`.
+- If `git push` fails with `Permission denied (publickey)`, verify:
+- Your SSH key is added to the SSH agent: `ssh-add ~/.ssh/id_ed25519`.
+- The public key is added to GitHub: `https://github.com/settings/keys`.
+- The remote URL uses SSH: `git remote -v` should show `git@github.com:...`.
+- Test the SSH connection: `ssh -T git@github.com`.
 
 - **Merge Conflicts**:
-  - If pulling or merging changes results in conflicts, Git will mark affected files with conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). Edit the files to resolve conflicts, then:
-    ```
-    git add <file>
-    git commit
-    ```
+- If pulling or merging changes results in conflicts, Git will mark affected files with conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`). Edit the files to resolve conflicts, then:
+  - git add <file>
+  - git commit
+
 
 #### Development Environment
 - **404 Errors for `bundle.js`**:
-  - Ensure `index.html` references `/dist/bundle.js` correctly (e.g., `<script src="/dist/bundle.js"></script>`).
-  - Verify `webpack.config.js` has `output.publicPath` set to `/dist/` and `devServer.static.directory` set to `path.resolve(__dirname)`.
+- Ensure `index.html` references `/dist/bundle.js` correctly (e.g., `<script src="/dist/bundle.js"></script>`).
+- Verify `webpack.config.js` has `output.publicPath` set to `/dist/` and `devServer.static.directory` set to `path.resolve(__dirname)`.
 
 - **"Cannot GET /" Error**:
-  - Ensure Webpack Dev Server is running (`npm run start`) and serving from the project root. Check `webpack.config.js` for correct `devServer` settings.
+- Ensure Webpack Dev Server is running (`npm run start`) and serving from the project root. Check `webpack.config.js` for correct `devServer` settings.
 
 - **Layout Issues (Scrollbars, White Background)**:
-  - Verify `styles/main.css` includes:
-    ```css
-    html, body {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background: black;
-    }
-    canvas {
-      display: block;
-    }
-    ```
+- Verify `styles/main.css` includes:
+```css
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: black;
+}
+canvas {
+  display: block;
+}
+```
 
-- **Controls Not Working**:
-  - Ensure the browser window has focus—click inside the window to activate controls.
-  - Check `src/core/game.js` for correct event listeners (keydown and keyup for spacebar).
+Controls Not Working:
+Ensure the browser window has focus—click inside the window to activate controls.
+Check src/core/game.js for correct event listeners (keydown and keyup for spacebar).
+Resources
 
-### Resources
+Git and GitHub:
+Official Git Documentation: Comprehensive guide to Git commands.
+GitHub Guides: Tutorials on GitHub features (e.g., Pull Requests, Issues).
+Learn Git Branching: Interactive tutorial for branching and merging.
+Game Development:
+Phaser Documentation: If considering a game framework for easier development.
+OpenGameArt: Free placeholder art assets.
+Freesound: Free placeholder audio assets.
+Markdown:
+GitHub Markdown Guide: Format your README.md with headings, lists, images, etc.
+Backup:
+Regularly back up your local repository to an external drive or cloud storage (e.g., Google Drive, Dropbox) in case of GitHub account issues. To download a copy of the repository:
+Go to https://github.com/goodbetterbestco/LanderGame, click the green "Code" button, and select "Download ZIP."
 
-- **Git and GitHub**:
-  - [Official Git Documentation](https://git-scm.com/doc): Comprehensive guide to Git commands.
-  - [GitHub Guides](https://guides.github.com/): Tutorials on GitHub features (e.g., Pull Requests, Issues).
-  - [Learn Git Branching](https://learngitbranching.js.org/): Interactive tutorial for branching and merging.
-
-- **Game Development**:
-  - [Phaser Documentation](https://phaser.io/docs): If considering a game framework for easier development.
-  - [OpenGameArt](https://opengameart.org/): Free placeholder art assets.
-  - [Freesound](https://freesound.org/): Free placeholder audio assets.
-
-- **Markdown**:
-  - [GitHub Markdown Guide](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax): Format your README.md with headings, lists, images, etc.
-
-- **Backup**:
-  - Regularly back up your local repository to an external drive or cloud storage (e.g., Google Drive, Dropbox) in case of GitHub account issues. To download a copy of the repository:
-    - Go to https://github.com/goodbetterbestco/LanderGame, click the green "Code" button, and select "Download ZIP."
 
 ---
 
@@ -608,8 +601,10 @@ Here are the immediate tasks for the next developer, prioritized to advance the 
 
 The revised `README.md` ensures the next developer can:
 - **Get Started Immediately**: Clear setup instructions, including GitHub access and SSH configuration, eliminate barriers to entry.
-- **Understand the Project's State**: Detailed progress summary and known issues provide context, while next steps offer a clear roadmap.
+- **Understand the Project’s State**: Detailed progress summary and known issues provide context, while next steps offer a clear roadmap.
 - **Avoid Pitfalls**: Troubleshooting tips and resources prevent common issues, especially with Git and GitHub, based on our session.
 - **Continue Development Effectively**: Guidance on version control, testing, and community building ensures the project stays on track toward its goals.
 
 This `README.md` is now a comprehensive onboarding document, balancing high-level vision with practical, actionable steps. The next developer should have everything they need to pick up where you left off and advance the project successfully.
+
+---
