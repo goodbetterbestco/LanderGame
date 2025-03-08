@@ -1,7 +1,5 @@
 # README: Lunar Landing: Starship Edition
 
-test change to verify SSH push
-
 ## Enhanced Development Plan for "Lunar Landing: Starship Edition"
 
 ### Game Concept Overview
