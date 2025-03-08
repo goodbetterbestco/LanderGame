@@ -1,0 +1,16 @@
+/* Reset default margins and padding */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* Prevent scrollbars */
+    background-color: #000; /* Ensure background is black, matching canvas */
+}
+
+/* Ensure canvas fills the viewport */
+#gameCanvas {
+    display: block; /* Remove any default inline spacing */
+    width: 100%;
+    height: 100%;
+}
